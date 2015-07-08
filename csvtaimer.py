@@ -7,9 +7,8 @@ import json
 from numpy import genfromtxt, loadtxt
 from pandas import read_csv, read_table
 
-chdir('/home/r/python') 	#Teistes arvutistes tuleb siit kausta asukohta muuta
-							#V6i see funktsioon p2ris eemaldada ja .py koos .csv failiga samasse kasuta asetada
-inputFile = ('rand100000,7.csv')	#Siia kirjuta faili nimi
+chdir('/home/r/python')
+inputFile = ('rand100,5.csv')	#Siia kirjuta faili nimi
 
 """
 Faili avamine
