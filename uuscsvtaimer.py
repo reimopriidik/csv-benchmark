@@ -31,7 +31,6 @@ def avamistaimer(avamisviis, alh):
 			headerf(avamisviis)
 		end=timeit.default_timer()
 		result.append(round((end - start), 7))
-	open(inputFile,'r').close()
 	kirj(alh, result)
 
 def kirj(alh, result):
