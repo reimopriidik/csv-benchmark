@@ -14,16 +14,10 @@ inputFile = ('rand100,5.csv')
 def delold():
 	if os.path.isfile('avamine_ajad.json'):
 		os.remove('avamine_ajad.json')
-	else:
-		pass
 	if os.path.isfile('loop_ajad.json'):
 		os.remove('loop_ajad.json')
-	else:
-		pass
 	if os.path.isfile('header_ajad.json'):
 		os.remove('header_ajad.json')
-	else:
-		pass
 
 def avamistaimer(avamisviis, alh):
 	result=[]
