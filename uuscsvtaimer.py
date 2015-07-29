@@ -12,7 +12,6 @@ inputFile = ('rand100,5.csv')
 
 def avamistaimer(a, e):
 	result=[]
-	f=open(inputFile,'r')
 	for _ in range(99):
 		start=timeit.default_timer()
 		if e=='ava':
