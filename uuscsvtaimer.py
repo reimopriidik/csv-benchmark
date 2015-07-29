@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 #from os import chdir
+import os
 import csv
 import timeit
 import json
@@ -9,6 +10,20 @@ from pandas import read_csv, read_table
 
 #chdir('/home/r/python')
 inputFile = ('rand100,5.csv')
+
+def delold():
+	if os.path.isfile('avamine_ajad.json'):
+		os.remove('avamine_ajad.json')
+	else:
+		pass
+	if os.path.isfile('loop_ajad.json'):
+		os.remove('loop_ajad.json')
+	else:
+		pass
+	if os.path.isfile('header_ajad.json'):
+		os.remove('header_ajad.json')
+	else:
+		pass
 
 def avamistaimer(avamisviis, alh):
 	result=[]
@@ -72,6 +87,8 @@ def headerf(avamisviis):
 			l1 = read_csv(csvfile, delimiter=(','), header=0)
 			list(l1.columns.values)
 			pass
+	
+delold()
 
 avamistaimer(avamisviis=csv.reader, alh='ava')
 avamistaimer(avamisviis=csv.DictReader, alh='ava')
