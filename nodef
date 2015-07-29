@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 #from os import chdir
-import os
+#import os
 import csv
 import timeit
 import json
 from numpy import genfromtxt, loadtxt
-from pandas import read_csv, read_table
+#from pandas import read_csv, read_table
 
 #chdir('/home/r/python')
 inputFile = ('rand100,5.csv')
