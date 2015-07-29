@@ -24,7 +24,6 @@ for _ in range(99):
 				pass
 	end=timeit.default_timer()
 	result1.append(round((end - start), 7))
-open(inputFile,'r').close()
 
 for _ in range(99):
 	start=timeit.default_timer()
@@ -33,7 +32,6 @@ for _ in range(99):
 				pass
 	end=timeit.default_timer()
 	result2.append(round((end - start), 7))
-open(inputFile,'r').close()
 
 for _ in range(99):
 	start=timeit.default_timer()
@@ -42,7 +40,6 @@ for _ in range(99):
 				pass
 	end=timeit.default_timer()
 	result3.append(round((end - start), 7))
-open(inputFile,'r').close()
 
 for _ in range(99):
 	start=timeit.default_timer()
@@ -51,7 +48,6 @@ for _ in range(99):
 				pass
 	end=timeit.default_timer()
 	result4.append(round((end - start), 7))
-open(inputFile,'r').close()
 
 result=result1,result2,result3,result4
 
