@@ -2,9 +2,8 @@
 
 #from os import chdir
 import os
-import csv
 import timeit
-import json
+import csv, json
 from numpy import genfromtxt, loadtxt
 from pandas import read_csv, read_table
 
