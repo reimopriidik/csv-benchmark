@@ -1,62 +1,62 @@
 #!/usr/bin/env python
 
 #from os import chdir
-#import os
+import os
 import csv
 import timeit
 import json
 from numpy import genfromtxt, loadtxt
-#from pandas import read_csv, read_table
+from pandas import read_csv, read_table
 
 #chdir('/home/r/python')
 inputFile = ('rand100,5.csv')
 
+rcsvr=[]
+rdictr=[]
+rgenfromtxt=[]
+rloadtxt=[]
 
-result1=[]
-result2=[]
-result3=[]
-result4=[]
 #loop
-for _ in range(99):
+for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
 			for row in csv.reader(csvfile):
 				pass
 	end=timeit.default_timer()
-	result1.append(round((end - start), 7))
+	rcsvr.append(round((end - start), 7))
 
-for _ in range(99):
+for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
 			for row in csv.DictReader(csvfile):
 				pass
 	end=timeit.default_timer()
-	result2.append(round((end - start), 7))
+	rdictr.append(round((end - start), 7))
 
-for _ in range(99):
+for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
 			for row in genfromtxt(csvfile, dtype = str):
 				pass
 	end=timeit.default_timer()
-	result3.append(round((end - start), 7))
+	rgenfromtxt.append(round((end - start), 7))
 
-for _ in range(99):
+for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
 			for row in loadtxt(csvfile, dtype = str):
 				pass
 	end=timeit.default_timer()
-	result4.append(round((end - start), 7))
+	rloadtxt.append(round((end - start), 7))
 
 n=0
-l=max([len(result1),len(result2),len(result3),len(result4)])
+l=max([len(rcsvr),len(rdictr),len(rgenfromtxt),len(rloadtxt)])
 with open('loop_ajad.csv','w') as csvfile:
 	fieldnames=['katse','csv.reader','csv.DictReader','genfromtxt','loadtxt']
 	writer=csv.DictWriter(csvfile,fieldnames=fieldnames)
 	writer.writeheader()
 	for _ in range(l):
-		writer.writerow({'katse':n+1,'csv.reader':result1[n],'csv.DictReader':result2[n],\
-		'genfromtxt':result3[n],'loadtxt':result4[n]})
+		writer.writerow({'katse':n+1,'csv.reader':rcsvr[n],'csv.DictReader':rdictr[n],\
+		'genfromtxt':rgenfromtxt[n],'loadtxt':rloadtxt[n]})
 		n=n+1
 		#trigger outofrange errori eemaldamiseks!
