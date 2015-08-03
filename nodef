@@ -59,4 +59,3 @@ with open('loop_ajad.csv','w') as csvfile:
 		writer.writerow({'katse':n+1,'csv.reader':rcsvr[n],'csv.DictReader':rdictr[n],\
 		'genfromtxt':rgenfromtxt[n],'loadtxt':rloadtxt[n]})
 		n=n+1
-		#trigger outofrange errori eemaldamiseks!
