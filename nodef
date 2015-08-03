@@ -20,32 +20,32 @@ rloadtxt=[]
 for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
-			for row in csv.reader(csvfile):
-				pass
+		for row in csv.reader(csvfile):
+			pass
 	end=timeit.default_timer()
 	rcsvr.append(round((end - start), 7))
 
 for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
-			for row in csv.DictReader(csvfile):
-				pass
+		for row in csv.DictReader(csvfile):
+			pass
 	end=timeit.default_timer()
 	rdictr.append(round((end - start), 7))
 
 for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
-			for row in genfromtxt(csvfile, dtype = str):
-				pass
+		for row in genfromtxt(csvfile, dtype = str):
+			pass
 	end=timeit.default_timer()
 	rgenfromtxt.append(round((end - start), 7))
 
 for _ in range(100):
 	start=timeit.default_timer()
 	with open(inputFile, 'r') as csvfile:
-			for row in loadtxt(csvfile, dtype = str):
-				pass
+		for row in loadtxt(csvfile, dtype = str):
+			pass
 	end=timeit.default_timer()
 	rloadtxt.append(round((end - start), 7))
 
