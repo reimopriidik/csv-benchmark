@@ -56,7 +56,7 @@ with open('loop_ajad.csv','w') as csvfile:
 	writer=csv.DictWriter(csvfile,fieldnames=fieldnames)
 	writer.writeheader()
 	for _ in range(l):
-		writer.writerow({'katse':n+1,'csv.reader':result1[n],'csv.DictReader':result2[n],'genfromtxt':result3[n],\
-		'loadtxt':result4[n]})
+		writer.writerow({'katse':n+1,'csv.reader':result1[n],'csv.DictReader':result2[n],\
+		'genfromtxt':result3[n],'loadtxt':result4[n]})
 		n=n+1
 		#trigger outofrange errori eemaldamiseks!
