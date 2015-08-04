@@ -50,7 +50,7 @@ for _ in range(100):
 
 n=0
 l=max([len(rcsvr),len(rdictr),len(rgenfromtxt),len(rloadtxt)])
-with open('loop_ajad.csv','w') as csvfile:
+with open('loop_ajad('+str(inputFile)+').csv','w') as csvfile:
 	fieldnames=['katse','csv.reader','csv.DictReader','genfromtxt','loadtxt']
 	writer=csv.DictWriter(csvfile,fieldnames=fieldnames)
 	writer.writeheader()
