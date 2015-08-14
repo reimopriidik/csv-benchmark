@@ -79,24 +79,27 @@ def headerf(avamisviis):
 			l1 = read_csv(csvfile, delimiter=(','), header=0)
 			list(l1.columns.values)
 			pass
+
+def execute():	
+	delold()
 	
-delold()
+	avamistaimer(avamisviis=csv.reader, alh='ava')
+	avamistaimer(avamisviis=csv.DictReader, alh='ava')
+	avamistaimer(avamisviis=genfromtxt, alh='ava')
+	avamistaimer(avamisviis=loadtxt, alh='ava')
+	avamistaimer(avamisviis=read_csv, alh='ava')
+	avamistaimer(avamisviis=read_table, alh='ava')
+	
+	avamistaimer(avamisviis=csv.reader, alh='loop')
+	avamistaimer(avamisviis=csv.DictReader, alh='loop')
+	avamistaimer(avamisviis=genfromtxt, alh='loop')
+	avamistaimer(avamisviis=loadtxt,alh='loop')
+	
+	avamistaimer(avamisviis=csv.reader, alh='header')
+	avamistaimer(avamisviis=csv.DictReader, alh='header')
+	avamistaimer(avamisviis=genfromtxt, alh='header')
+	avamistaimer(avamisviis=loadtxt, alh='header')
+	avamistaimer(avamisviis=read_csv, alh='header')
+	avamistaimer(avamisviis=read_table, alh='header')
 
-avamistaimer(avamisviis=csv.reader, alh='ava')
-avamistaimer(avamisviis=csv.DictReader, alh='ava')
-avamistaimer(avamisviis=genfromtxt, alh='ava')
-avamistaimer(avamisviis=loadtxt, alh='ava')
-avamistaimer(avamisviis=read_csv, alh='ava')
-avamistaimer(avamisviis=read_table, alh='ava')
-
-avamistaimer(avamisviis=csv.reader, alh='loop')
-avamistaimer(avamisviis=csv.DictReader, alh='loop')
-avamistaimer(avamisviis=genfromtxt, alh='loop')
-avamistaimer(avamisviis=loadtxt,alh='loop')
-
-avamistaimer(avamisviis=csv.reader, alh='header')
-avamistaimer(avamisviis=csv.DictReader, alh='header')
-avamistaimer(avamisviis=genfromtxt, alh='header')
-avamistaimer(avamisviis=loadtxt, alh='header')
-avamistaimer(avamisviis=read_csv, alh='header')
-avamistaimer(avamisviis=read_table, alh='header')
+execute()
